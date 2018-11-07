@@ -83,8 +83,12 @@ def run(cpp_filename):
             stdout=subprocess.PIPE,
             check=True,
     )
+
+    output_txt = result.stdout.decode()
     # present output
-    print(result.stdout.decode())
+    print(output_txt)
+
+    return output_txt
 
 
 def cleanup(cpp_filename):
